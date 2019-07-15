@@ -114,7 +114,8 @@ console.log(uni);
 // Given this zoo data from around the United States, follow the instructions below.  Use the specific array methods in the requests below to solve the problems.
 
 
-zooAnimals = [{ "animal_name": "Jackal, asiatic", "population": 5, "scientific_name": "Canis aureus", "state": "Kentucky" },
+zooAnimals = [
+    { "animal_name": "Jackal, asiatic", "population": 5, "scientific_name": "Canis aureus", "state": "Kentucky" },
     { "animal_name": "Screamer, southern", "population": 1, "scientific_name": "Chauna torquata", "state": "Alabama" },
     { "animal_name": "White spoonbill", "population": 8, "scientific_name": "Platalea leucordia", "state": "Georgia" },
     { "animal_name": "White-cheeked pintail", "population": 1, "scientific_name": "Anas bahamensis", "state": "Oregon" },
@@ -134,7 +135,7 @@ The zoo wants to display both the scientific name and the animal name in front o
 const animalNames = [];
 zooAnimals.forEach(assembler);
 
-function assembler() {
+function assembler(zooAnimals) {
     animalNames.push(`Name: ${zooAnimals.animal_name}  Scientific: ${zooAnimals.scientific_name}`);
 };
 console.log(animalNames);
@@ -146,6 +147,11 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 */
 
 const lowerCase = [];
+zooAnimals.map(lister);
+
+function lister(zooAnimals) {
+    lowerCase.push(zooAnimals.animal_name.toLowerCase());
+}
 console.log(lowerCase);
 
 /* Request 3: .filter() 
@@ -154,6 +160,9 @@ The zoos are concenred about animals with a lower population count. Find out whi
 
 */
 const lowerPopulation = [];
+zooAnimals.filter(() => {
+    lowerPopulation.push(zooAnimals.population > 5)
+});
 console.log(lowerPopulation);
 
 /* Request 4: .reduce() 
