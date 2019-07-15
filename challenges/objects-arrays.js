@@ -8,12 +8,12 @@
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 dino1 {
-    name: 'tyrannosaurus',
-    diet: 'carnivorous',
-    weightkg: 7000,
-    lengthm: 12,
-    period: 'Late Cretaceous'
-    roar: function roar() {
+    "name": 'tyrannosaurus',
+    "diet": 'carnivorous',
+    "weightkg": 7000,
+    "lengthm": 12,
+    "period": 'Late Cretaceous'
+    "roar": function roar() {
         console.log(`${this.name} says RAWERSRARARWERSARARARRRR`)
 
     }
@@ -21,19 +21,19 @@ dino1 {
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
 dino2 {
-    name: 'stegosaurus',
-    diet: 'herbivorous',
-    weightkg: 2000,
-    lengthm: 9,
-    period: 'Late Jurassic'
+    "name": 'stegosaurus',
+    "diet": 'herbivorous',
+    "weightkg": 2000,
+    "lengthm": 9,
+    "period": 'Late Jurassic'
 }
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
 dino3 {
-    name: 'velociraptor',
-    diet: 'carnivorous',
-    weightkg: 15,
-    lengthm: 1.8,
-    period: 'Late Cretaceous'
+    "name": 'velociraptor',
+    "diet": 'carnivorous',
+    "weightkg": 15,
+    "lengthm": 1.8,
+    "period": 'Late Cretaceous'
 }
 // Using your dinosaur objects, log answers to these questions:
 
@@ -71,11 +71,17 @@ const graduates = [{ "id": 1, "first_name": "Cynde", "university": "Missouri Sou
     { "id": 10, "first_name": "Hube", "university": "Universitat Rovira I Virgili Tarragona", "email": "hlethbrig9@foxnews.com" }
 ]
 
-/* Request 1: Create a new array called universities that contains all the universities in the graduates array.  
+/* Request 1: Create a new array called universities that contains all the universities in the graduates array. */
 
-Once you have the new array created, sort the universities alphabetically and log the result. */
+/*Once you have the new array created, sort the universities alphabetically and log the result. */
 const universities = [];
-console.log(universities)
+for (let i = 0; i < graduates.length; i++) {
+    universities.push(graduates[i].university);
+}
+}
+universities.sort();
+console.log(universities);
+
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. 
 
@@ -84,6 +90,9 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
+graduates.forEach() {
+        console.log(`${graduates.first_name} " " ${email})
+};
 console.log(contactInfo);
 
 
