@@ -7,35 +7,34 @@
 */
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
-dino1 {
+dino1 = {
     "name": 'tyrannosaurus',
     "diet": 'carnivorous',
     "weightkg": 7000,
     "lengthm": 12,
-    "period": 'Late Cretaceous'
-    "roar": function roar() {
-        console.log(`${this.name} says RAWERSRARARWERSARARARRRR`)
-
+    "period": 'Late Cretaceous',
+    roar: function() {
+        console.log(`${this.name} says RAWERSRARARWERSARARARRRR`);
     }
 }
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-dino2 {
-    "name": 'stegosaurus',
-    "diet": 'herbivorous',
-    "weightkg": 2000,
-    "lengthm": 9,
-    "period": 'Late Jurassic'
-}
-// velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-dino3 {
-    "name": 'velociraptor',
-    "diet": 'carnivorous',
-    "weightkg": 15,
-    "lengthm": 1.8,
-    "period": 'Late Cretaceous'
-}
-// Using your dinosaur objects, log answers to these questions:
+dino2 = {
+        "name": 'stegosaurus',
+        "diet": 'herbivorous',
+        "weightkg": 2000,
+        "lengthm": 9,
+        "period": 'Late Jurassic'
+    }
+    // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
+dino3 = {
+        "name": 'velociraptor',
+        "diet": 'carnivorous',
+        "weightkg": 15,
+        "lengthm": 1.8,
+        "period": 'Late Cretaceous'
+    }
+    // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
 console.log(dino1.weightkg + "kg");
@@ -52,7 +51,7 @@ console.log(dino1.period);
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
 console.log();
-roar()
+dino1.roar()
 
 
 // ==== Arrays ====
@@ -78,7 +77,6 @@ const universities = [];
 for (let i = 0; i < graduates.length; i++) {
     universities.push(graduates[i].university);
 }
-}
 universities.sort();
 console.log(universities);
 
@@ -90,15 +88,25 @@ Name email@example.com
 
 Log the result of your new array. */
 const contactInfo = [];
-graduates.forEach() {
-        console.log(`${graduates.first_name} " " ${email})
-};
+graduates.forEach(assemble);
+
+function assemble(graduates) {
+    contactInfo.push(`${graduates.first_name} ${graduates.email}`);
+}
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
+
+/*************************** I HAVE TO SKIP THIS ONE**************************
 const uni = [];
+graduates.filter((university) => {
+    graduates.university.includes("Uni", 0);
+    return uni.push(`${graduates.university}`);
+});
 console.log(uni);
+*/
+
 
 
 // ==== ADVANCED Array Methods ====
@@ -124,6 +132,11 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 const animalNames = [];
+zooAnimals.forEach(assembler);
+
+function assembler() {
+    animalNames.push(`Name: ${zooAnimals.animal_name}  Scientific: ${zooAnimals.scientific_name}`);
+};
 console.log(animalNames);
 
 /* Request 2: .map()    
