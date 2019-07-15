@@ -98,15 +98,13 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
-/*************************** I HAVE TO SKIP THIS ONE**************************
+/*************I HAVE TO SKIP THIS ONE THE INCLUDE IS NOT WORKING LIKE EXPECTED*******************/
 const uni = [];
-graduates.filter((university) => {
+graduates.filter((graduates) => {
     graduates.university.includes("Uni", 0);
     return uni.push(`${graduates.university}`);
 });
 console.log(uni);
-*/
-
 
 
 // ==== ADVANCED Array Methods ====
@@ -174,7 +172,26 @@ const populationTotal = zooAnimals.reduce((animTotal, population) => {
     return animTotal += zooAnimals.population;
 }, 0);
 console.log(populationTotal);
+//console.log(zooAnimals.reduce());
 
+const populationTotalArray = [];
+zooAnimals.forEach(makeArray);
+
+function makeArray(zooAnimals) {
+    populationTotalArray.push(zooAnimals.population);
+}
+console.log(populationTotalArray); //I made the array a seperate item
+//populationTotalArray.reduce(myFunc);
+//
+//function myFunc(total, num) {
+//    console.log(total + num);
+//}
+
+
+var popTotal = populationTotalArray.reduce(function(a, b) {
+    return a + b;
+});
+console.log(popTotal);
 
 /* 
 
