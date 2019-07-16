@@ -168,11 +168,11 @@ The zoos need to know their total animal population across the United States.  F
 
 */
 
-const populationTotal = zooAnimals.reduce((animTotal, population) => {
-    return animTotal += zooAnimals.population;
+const populationTotal = zooAnimals.reduce((animTotal, animalZoo) => {
+    return animTotal += animalZoo.population;
 }, 0);
 console.log(populationTotal);
-//console.log(zooAnimals.reduce());
+//this was the solution that I was shown after the thing.
 
 const populationTotalArray = [];
 zooAnimals.forEach(makeArray);
