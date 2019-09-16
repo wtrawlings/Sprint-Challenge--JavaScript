@@ -28,8 +28,8 @@ const cuboid = new CuboidMaker({
 console.log(cuboid); // checking to see if this worked. It did.
 */
 
-/* THIS IS THE CLASS VERSION */
-class CuboidMaker {
+/* THIS IS THE CLASS VERSION  with changed names so there is no conflict with the previous file and it's variables names*/
+class ClassyCuboidMaker {
     constructor(lengthA, widthA, heightA) {
         this.lengthA = lengthA;
         this.widthA = widthA;
@@ -50,8 +50,8 @@ const cuboid = new CuboidMaker({
     heightA: 5,
 });
 */
-const cuboid = new CuboidMaker(4, 5, 5);
+const classyCuboid = new ClassyCuboidMaker(4, 5, 5);
 
 /**this is a test */
-console.log(cuboid.volume()); // 100
-console.log(cuboid.surfaceArea()); // 130
+console.log(classyCuboid.volume()); // 100
+console.log(classyCuboid.surfaceArea()); // 130
