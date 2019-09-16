@@ -58,7 +58,8 @@ dino1.roar()
 
 // Given an array of college graduates.  Complete the following requests using any array method you like
 
-const graduates = [{ "id": 1, "first_name": "Cynde", "university": "Missouri Southern State College", "email": "ctorry0@macromedia.com" },
+const graduates = [
+    { "id": 1, "first_name": "Cynde", "university": "Missouri Southern State College", "email": "ctorry0@macromedia.com" },
     { "id": 2, "first_name": "Saundra", "university": "The School of the Art Institute of Chicago", "email": "swhal1@state.gov" },
     { "id": 3, "first_name": "Lambert", "university": "Marian College", "email": "lparham2@techcrunch.com" },
     { "id": 4, "first_name": "Modestine", "university": "International Medical & Technological University", "email": "mdolder3@symantec.com" },
@@ -98,14 +99,14 @@ console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
 
-/*************I HAVE TO SKIP THIS ONE THE INCLUDE IS NOT WORKING LIKE EXPECTED*******************/
-const uni = [];
-graduates.filter((graduates) => {
-    graduates.university.includes("Uni", 0);
-    return uni.push(`${graduates.university}`);
-});
-console.log(uni);
-
+let uniSchools = []; //make a array with all universities
+for (let i = 0; i < graduates.length; i++) {
+    uniSchools.push(graduates[i].university);
+}
+var uniFilter = uniSchools.filter((uniSchools) => { //filter it
+    return uniSchools.includes("Uni"); //true vs false test
+}); //there has got to be a better way to do this!!!
+console.log(uniFilter);
 
 // ==== ADVANCED Array Methods ====
 
@@ -172,8 +173,7 @@ const populationTotal = zooAnimals.reduce((animTotal, animalZoo) => {
     return animTotal += animalZoo.population;
 }, 0);
 console.log(populationTotal);
-//this was the solution that I was shown after the thing.
-
+//------------------------------------------------
 const populationTotalArray = [];
 zooAnimals.forEach(makeArray);
 
